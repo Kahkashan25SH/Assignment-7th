@@ -34,11 +34,14 @@ const Client = () => {
             key={product.id}
             className="bg-white p-4 shadow-md rounded-lg hover:scale-[1.05] transition"
           >
-            <Image
-              src={product.image}
-              alt={product.title}
-              className="w-full h-40 object-contain mb-4"
-            />
+          <div className="relative w-full h-64">
+              <Image
+                src={product.image} 
+                alt={product.title}
+                layout="fill"
+                objectFit="contain" 
+              />
+            </div>
             <h2 className="text-lg font-semibold">{product.title}</h2>
             <p className="text-gray-600 text-sm">
               {product.description.slice(0, 50)}...
